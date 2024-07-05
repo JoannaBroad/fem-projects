@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import Hedgehog from '../assets/hedgehogLeft.svg';
+import Logo from '../assets/JbLogo.svg';
+---
+
+<footer
+	class="bg-[#a4b99c] text-slate-700 p-1 md:text-right fixed bottom-0 left-0 right-0 h-14"
+>
+	<Image
+		src={Hedgehog}
+		alt=""
+		class="h-16 w-24 right-5 bottom-12 hidden md:block absolute"
+		alt=""
+	/>
+	<div class="grid grid-flow-col">
+		<Image
+			src={Logo}
+			alt=""
+			class="h-10 justify-end self-end hidden md:inline-block"
+			alt=""
+		/>
+		<p class="">
+			Challenge by <a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank">Frontend Mentor</a
+			>. Coded by <a href="Joanna-broad.co.uk" target="_blank">Joanna Broad</a>.
+		</p>
+	</div>
+</footer>

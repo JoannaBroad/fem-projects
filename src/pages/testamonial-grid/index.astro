@@ -1,0 +1,22 @@
+---
+import Layout from '../../layout/layout.astro';
+import { testimonials } from './testimonial.js'
+import Image from 'astro/components/Image.astro';
+
+---
+
+<Layout title="grid">
+	<div class="flex justify-center items-center m-28">
+		<div class="grid grid-cols-4 gap-5">
+    {testimonials.map(testimonial => (
+      <div class={`card ${testimonial.bgColor} rounded-lg` }>
+        <div class="card-content">
+					<Image src={testimonial.image} alt={testimonial.person} class="card-image" />
+          <h3>{testimonial.person}</h3>
+          <p>{testimonial.quote}</p>
+        </div>
+      </div>
+    ))}
+		</div>
+  </div>
+</Layout>
